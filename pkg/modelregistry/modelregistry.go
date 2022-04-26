@@ -111,6 +111,7 @@ func (r *modelRegistry) RegisterModelPlugin(moduleName string) (types.ShortName,
 	r.mu.Lock()
 	defer r.mu.Unlock()
 	r.plugins[modelOid] = serviceModelPlugin
+	log.Infof("plugins : %v", r.plugins)
 
 	return smData.Name, smData.Version, nil
 }
