@@ -27,6 +27,7 @@ func ModelIDToOid(r Registry, name string, version string) (types.OID, error) {
 		getOid(r, oran),
 		getOid(r, e2)})
 
+	log.Info("SM name is :", name)
 	if name == "e2sm-met" {
 		modelOid = createDottedOid([]string{oidPrefix, "2", "2", "98"})
 
