@@ -38,7 +38,7 @@ func main() {
 
 	flag.Parse()
 
-	log.Info("Starting onos-e2t-custom-eurecom-version")
+	log.Info("Starting onos-e2t-custom-eurecom-version 0.0.3")
 	cfg := manager.Config{
 		CAPath:              *caPath,
 		KeyPath:             *keyPath,

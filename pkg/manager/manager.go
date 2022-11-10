@@ -49,7 +49,8 @@ func NewManager(config Config) *Manager {
 	log.Info("Creating Manager")
 	modelRegistry := modelregistry.NewModelRegistry()
 	for _, smp := range config.ServiceModelPlugins {
-		if _, _, err := modelRegistry.RegisterModelPlugin(smp); err != nil {
+		if tt, _, err := modelRegistry.RegisterModelPlugin(smp); err != nil {
+			log.Warn(tt)
 			log.Fatal(err)
 		}
 	}
