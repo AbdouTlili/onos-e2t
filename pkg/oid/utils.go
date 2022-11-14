@@ -31,6 +31,9 @@ func ModelIDToOid(r Registry, name string, version string) (types.OID, error) {
 	if name == "e2sm-met" {
 		modelOid = createDottedOid([]string{oidPrefix, "2", "2", "98"})
 
+	} else if name == "e2sm-xtdd" {
+		modelOid = createDottedOid([]string{oidPrefix, "2", "2", "97"})
+
 	} else {
 		modelOid = createDottedOid([]string{oidPrefix, getOid(r, version), getOid(r, e2sm), getOid(r, name)})
 	}
